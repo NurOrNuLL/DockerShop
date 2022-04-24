@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  mvc:
+    container_name: mvc
+    build:
+      context: .
+      dockerfile: ./DockerShop/Dockerfile
+    environment:
+      - ASPNETCORE_URLS=http://*:5000
+    ports:
+      - "5000:5000"

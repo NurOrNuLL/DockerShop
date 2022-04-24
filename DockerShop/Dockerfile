@@ -3,7 +3,6 @@ WORKDIR /app
 
 EXPOSE 80
 EXPOSE 443
-ENV ASPNETCORE_URLS=http://*:5273
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
