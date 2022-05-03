@@ -31,4 +31,4 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           context: .
           file: ./DockerShop/Dockerfile
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/dockeraction:latest,  ${{ secrets.DOCKER_HUB_USERNAME }}/dockeraction:${{ steps.version-bump.outputs.newTag }}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/dockeraction:${{ steps.version-bump.outputs.newTag }}
