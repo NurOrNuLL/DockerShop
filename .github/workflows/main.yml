@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - 'master'
-    tags:
-      - 'v*'
 
 jobs:
   docker:
@@ -33,4 +31,4 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           context: .
           file: ./DockerShop/Dockerfile
-          tags: ${{ env.IMAGE_NAME }}:latest, ${{ env.IMAGE_NAME }}:${{ steps.version-bump.outputs.newTag }}
+          tags: orynbayev/docker_shop:latest, orynbayev/docker_shop:${{ steps.version-bump.outputs.newTag }}
