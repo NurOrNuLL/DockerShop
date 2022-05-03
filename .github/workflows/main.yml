@@ -31,4 +31,4 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           context: .
           file: ./DockerShop/Dockerfile
-          tags: orynbayev/docker_shop:latest, orynbayev/docker_shop:${{ steps.version-bump.outputs.newTag }}
+          tags: docker_shop:latest, docker_shop:${{ steps.version-bump.outputs.newTag }}
