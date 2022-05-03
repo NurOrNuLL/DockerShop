@@ -25,4 +25,4 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           context: .
           file: ./DockerShop/Dockerfile
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/simplewhale:latest
+          tags: orynbayev/simplewhale:latest
